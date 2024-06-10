@@ -1,0 +1,296 @@
+name,type,unit,description
+dataset_id,character,"","dataset identifier (normalized URI, that is: ""/"" replaced with ""_"")"
+trial_id,character,"",Identifier of a single trial (that may have treatments and replicates); should be unique within dataset_id
+record_id,integer,"",Unique identifier for each records in a dataset (sequence from 1 to n)
+country,character,"",Country name
+adm1,character,"",First level administrative subdivision
+adm2,character,"",Second level administrative subdivision (within the first level subdivision)
+adm3,character,"",Third level administrative subdivision (within the second level subdivision)
+adm4,character,"",Fourth level administrative subdivision (within the third level subdivision)
+adm5,character,"",Fifth level administrative subdivision (within the fourth level subdivision)
+location,character,"","Name of the location where the location was made. E.g., a place name or locality description."
+site,character,"",Name of the sub-location where the observation was made
+reference,character,"",Reference to source if the data set is a compilation
+longitude,numeric,degrees,Longitude of the location where the observation was made (in decimal notation)
+latitude,numeric,degrees,Latitude of the location where the observation was made (in decimal notation)
+elevation,numeric,meter,Elevation above sea level
+date,character,"","Observation date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+time,character,"","Observation time in ""hh:mm:ss"", ""hh:mm"", or ""hh"" format"
+planting_date,character,"","Planting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+emergence_date,character,"","Emergence date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+transplanting_date,character,"","Transplanting date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+flowering_date,character,"","Flowering date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+maturity_date,character,"","Maturity date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+harvest_date,character,"","Harvest date in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format"
+season,character,"",Season name
+on_farm,logical,"",Is this observation on farm (not on station)
+is_survey,logical,"",Is this observation from a survey (not an experiment)
+treatment,character,"","Description of the treatment, if any. Can be a code used in the original data. There are no rules about its content or format"
+rep,integer,"","Replication number (1, 2, 3, ...) For this specific observation"
+crop,character,"",Crop name(s)
+variety,character,"",Variety name
+variety_code,character,"",Variety code (used by breeders)
+variety_type,character,"","variety grouping (e.g. climbing/bush) and/or ""improved/landrace"""
+intercrops,character,"",Other crop grown together with the main crop
+previous_crop,character,"",Crop grown on this plot in the prior season
+crop_rotation,character,"",Crops grown in rotation on this plot
+dmy_roots,numeric,kg/ha,Dry-weight biomass of fine roots per ha
+dmy_stems,numeric,kg/ha,Dry-weight biomass of stems per ha
+dmy_leaves,numeric,kg/ha,Dry-weight biomass of leaves per ha
+dmy_storage,numeric,kg/ha,Dry-weight biomass of storage organs per ha
+dmy_total,numeric,kg/ha,Dry-weight total biomass per ha
+dmy_residue,numeric,kg/ha,Dry-weight residue biomass per ha
+yield_part,character,"","The part of the crop that ""yield"" refers to (e.g. grain, tubers, roots, leaves, fruit)"
+yield,numeric,kg/ha,"Fresh weight biomass of the main harvestable parts at maturity, per ha"
+residue_yield,numeric,kg/ha,"Fresh weight of the above ground biomass except for the harvestable parts at maturity, per ha"
+grain_weight,numeric,g,1000 grain weight
+fertilizer_type,character,"",Name of fertilizer used
+fertilizer_date,character,"","Date of fertilizer applications. Possibly followed by ""(product; amount)"""
+N_fertilizer,numeric,kg/ha,N applied in inorganic fertilizer
+N_splits,integer,"",Number of splits in the N_fertilizer application
+P_fertilizer,numeric,kg/ha,"P applied in inorganic fertilizer (as P, not P2O5)"
+K_fertilizer,numeric,kg/ha,"K applied in inorganic fertilizer (as K, not K2O)"
+Zn_fertilizer,numeric,kg/ha,Zn applied in inorganic fertilizer
+S_fertilizer,numeric,kg/ha,S applied in inorganic fertilizer
+B_fertilizer,numeric,kg/ha,B applied in inorganic fertilizer
+Ca_fertilizer,numeric,kg/ha,Ca applied in inorganic fertilizer
+Mg_fertilizer,numeric,kg/ha,Mg applied in inorganic fertilizer
+Fe_fertilizer,numeric,kg/ha,Fe applied in inorganic fertilizer
+lime,numeric,kg/ha,lime applied
+lime_used,logical,"",was any lime applied?
+gypsum,numeric,kg/ha,gypsum applied
+OM_used,logical,"",Organic fertilizer applied
+OM_type,character,"",Type of organic fertilzer applied
+OM_amount,numeric,kg/ha,Amount of organic fertilizer applied
+OM_N,numeric,kg/ha,N applied in organic fertilizer
+OM_P,numeric,kg/ha,P applied in organic fertilizer
+OM_K,numeric,kg/ha,K applied in organic fertilizer
+inoculated,logical,"",Was the field inoculated (with Rhizobium)
+inoculant,character,"",Name of the inoculant product
+irrigated,logical,"",Was the plot irrigated?
+irrigation_source,character,"",the source of irrigation water
+irrigation_method,character,"",the irrigation method
+irrigation_number,integer,"",How many times was the crop irrigated?
+irrigation_amount,numeric,mm,The total irrigation amount applied to the crop
+irrigation_dates,character,"","Irrigation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """
+land_prep_method,character,"",Land preparation (tillage) method used (including no-till)
+land_prep_implement,character,"",Land preparation (tillage) implement(s) used
+planting_method,character,"",Planting (sowing) method
+planting_implement,character,"",Planting (sowing) implement used
+transplanting_method,character,"",(rice) transplanting method
+uncertainty,numeric,"",Measure of noise in data 
+uncertainty_type,character,"",Type of noise measure
+row_spacing,numeric,cm,Distance between rows
+plot_area,numeric,m2,Area of the plot in square meter
+plot_lenght,numeric,m, Lenght of the plot in meter
+plot_width,numeric,m, Width of the plot in meter
+plant_spacing,numeric,cm,Distance between plants
+plant_density,numeric,plants/ha,Number of plants per ha
+rain,numeric,mm,Total rainfall between planting and harvest
+emergence_days,numeric,days,Days to emergence (after planting)
+heading_days,numeric,days,Days to heading (after planting)
+flowering_days,numeric,days,Days to flowering (after planting)
+anthesis_days,numeric,days,Days to anthesis (after planting). Anthesis occurs when pollen is released
+silking_days,numeric,days,Days to silking (after planting)
+asi,numeric,days,Anthesis silking interval
+tassling_days,numeric,days,Days to tassling (after planting)
+maturity_days,numeric,days,Days to maturity (after planting)
+harvest_days,numeric,days,Days to harvest (after planting)
+plant_height,numeric,cm,Maximum plant height
+ear_height,numeric,cm,height of first ear (maize female inflorescence)
+pathogen,character,"",Name of the pathogen studied
+AUDPC,numeric,"",Area under the disease progress curve
+rAUDPC,numeric,"",Area under the disease progress curve divided by the non-diseased season length
+root_infection,numeric,%,Roots that are disease infected
+root_AMF,numeric,%,Root colonization by arbuscular micorrhizal fungi
+nodule_weight,numeric,?,Fresh weight or root nodules
+leaf_N,numeric,mg/kg,nitrogen content in leaf
+leaf_K,numeric,mg/kg,potassium content in leaf
+leaf_P,numeric,mg/kg,phosphorous content in leaf
+leaf_S,numeric,mg/kg,sulphur content in leaf
+leaf_Mg,numeric,mg/kg,calcium content in leaf
+leaf_Ca,numeric,mg/kg,iron content in leaf
+leaf_Fe,numeric,mg/kg,zinc content in leaf
+leaf_Zn,numeric,mg/kg,zinc content in leaf
+leaf_Cu,numeric,mg/kg,copper content in leaf
+leaf_Mn,numeric,mg/kg,manganese content in leaf
+leaf_B,numeric,mg/kg,boron content in leaf
+leaf_Al,numeric,mg/kg,aluminium content in leaf
+grain_N,numeric,mg/kg,nitrogen content in grain
+grain_K,numeric,mg/kg,potassium content in grain
+grain_P,numeric,mg/kg,phosphorous content in grain
+grain_S,numeric,mg/kg,sulphur content in grain
+grain_Mg,numeric,mg/kg,magnesium content in grain
+grain_Ca,numeric,mg/kg,calcium content in grain
+grain_Fe,numeric,mg/kg,iron content in grain
+grain_Zn,numeric,mg/kg,zinc content in grain
+grain_Cu,numeric,mg/kg,copper content in grain
+grain_Mn,numeric,mg/kg,manganese content in grain
+grain_B,numeric,mg/kg,boron content in grain
+grain_Al,numeric,mg/kg,aluminium content in grain
+grain_protein,numeric,%,% protein in grain
+residue_N,numeric,kg/ha,nitrogen content in residue
+residue_P,numeric,kg/ha,phosphorus content in residue
+season_constraint,character,"","a constraint that occurred in this particular season (e.g. drought, flood)"
+herbicide_used,logical,"",was a herbicide used?
+herbicide_product,character,"",name(s) of the active ingredient of the herbicide
+herbicide_timing,character,"",days after (or before) planting on which herbicide was used; multiple applications separated by ;
+herbicide_times,integer,"",number of herbicide applications
+herbicide_dates,character,"","herbicide appliacation dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """
+herbicide_amount,numeric,kg (ai) / ha,how much herbicide was used?
+herbicide_implement,character,"",the implement (machine) used
+weeding_times,integer,"",how many times was the crop weeded?
+weeding_dates,character,"","weeding dates in ""yyyy-mm-dd"", ""yyyy-mm"", or ""yyyy"" format; separated by ""; """
+weed_species,character,"",weed species names 
+weed_biomass,numeric,kg/ha,Fresh weight weeds biomass
+weed_severity,character,"",how severe was the competition from weeds?
+weed_implement,character,"",the implement (machine) used
+insecticide_used,logical,"",was an insecticide used?
+insecticide_product,character,"",name(s) of the active ingredient of the insecticide
+insecticide_timing,integer,"",days after (or before) planting on which insecticide was used
+insecticide_times,integer,"",number of insecticide applications
+insecticide_amount,numeric,kg (ai) / ha,how much insecticide was used?
+insecticide_implement,character,"",the implement (machine) used
+pest_severity,character,"",how severe was the pest damage?
+pest_species,character,"",name(s) of relevant pest(s)
+pest_number,integer,"",number of pest species
+fungicide_used,logical,"",was a herbicide used?
+fungicide_product,character,"",name(s) of the active ingredient of the fungicide
+fungicide_timing,integer,"",days after (or before) planting on which fungicide was used
+fungicide_times,integer,"",number of fungicide applications
+fungicide_amount,numeric,kg (ai) / ha,how much fungicide was used?
+fungicide_implement,character,"",the implement (machine) used
+disease_severity,character,"",how severe was the disease damage?
+diseases,character,"",name(s) of relevant disease(s)
+residue_prevcrop,numeric,kg/ha,how much residue of the previous crop is on the field?
+mulch,numeric,kg/ha,how much mulch is on the field?
+seed_source,character,"",source of the seed used
+seed_amount,numeric,kg/ha,amount of seed used (seeding rate)
+seed_treatment,character,"",chemical or biological products applied to the seed
+crop_cut,logical,"",was the yield (in a survey) determined with a crop cut?
+previous_crop_residue_weight,numeric,kg/ha,weight of residue of previous crop that stayed on the field
+previous_crop_residue_perc,numeric,%,percentage of residue of previous crop that stayed on the field
+previous_crop_burnt,logical,"",was the residue of the previous crop burnt?
+crop_price,numeric,currency/kg,current crop price when sold to market
+fertilizer_price,character,currency/kg,price paid for fertilizer(s). E.g (urea=1; DAP=1.2)
+currency,character,"",currency used for prices
+flood_stress,character,"",how severe was the damage from flooding?
+drought_stress,character,"",how severe was the damage from drought?
+spike_density,numeric,spikes/ha,Number of spikes per ha
+LAI,numeric,leaf area index,"leaf area index (presumbably the max; this needs to be improved, it should be linked to a date and/or growht stage)"
+soil_type,character,"",soil name or description
+soil_pH,numeric,"",soil pH (H2O)
+soil_pH_KCl,numeric,"",soil pH (KCl)
+soil_pH_CaCl2,numeric,"",soil pH (CaCl2)
+soil_SOC,numeric,%,soil organic carbon
+soil_SOM,numeric,%,soil organic matter
+soil_sand,numeric,%,soil sand content (excluding gravel)
+soil_clay,numeric,%,soil clay content (excluding gravel)
+soil_silt,numeric,%,soil silt content (excluding gravel)
+soil_texture,character,"",soil texture
+soil_N,numeric,mg/kg,soil N content
+soil_K,numeric,mg/kg,soil K content
+soil_P_total,numeric,mg/kg,soil P (total) 
+soil_P_available,numeric,mg/kg,soil P (plant available) 
+soil_P_Mehlich,numeric,mg/kg,soil P (plant available; Mehlich extraction method) 
+soil_Ca,numeric,mg/kg,soil Ca content
+soil_Mg,numeric,mg/kg,soil Mg content
+soil_B,numeric,mg/kg,soil B content
+soil_Cu,numeric,mg/kg,soil Cu content
+soil_Mn,numeric,mg/kg,soil Mn content
+soil_Fe,numeric,mg/kg,soil Fe content
+soil_S,numeric,mg/kg,soil S content
+soil_Zn,numeric,mg/kg,soil Zn content
+soil_Na,numeric,mg/kg,soil Na content
+soil_Al,numeric,mg/kg,soil Al content
+soil_C,numeric,%,soil C content
+soil_EC,numeric,mS/cm,soil electric conductivity
+soil_bd,numeric,g/cm^-3,soil bulk density
+soil_sample_top,numeric,cm,soil sampling depth (top)
+soil_sample_bottom,numeric,cm,soil sampling depth (bottom)
+soil_CEC,numeric,cmol/kg,Cation Exchange Capacity
+soil_ECEC,numeric,cmol/kg,Effective Cation Exchange Capacity
+soil_ex_Ca,numeric,mg/kg,soil exchangeable Ca
+soil_ex_Mg,numeric,mg/kg,soil exchangeable Mg
+soil_ex_K,numeric,mg/kg,soil exchangeable K
+soil_ex_Na,numeric,mg/kg,soil exchangeable Na
+soil_ex_Al,numeric,mg/kg,soil exchangeable Al
+soil_color,character,"",soil color
+soil_quality,character,"",soil quality preception
+landscape_position,character,"",Relative landscape position
+soil_depth,numeric,cm,soil depth
+soil_constraint,character,"",soil constraint (e.g. saline)
+soil_PSI,numeric,"",phosphorous sorption index
+soil_ex_acidity,numeric,cmol/kg,"soil exchangeable acidity (""hp"")"
+trial_name,character,,Trial title
+striga_trial,logical,,Is this a striga trial?
+borer_trial,logical,,Is this a stem-borer trial?
+striga_infected,logical,,Was the plot infected with striga?
+description,character,,Trial description
+blight,"",,Leaf blight
+p_asp,"",,Plant Aspect
+p_harv,"",,Plant Harvest
+borer,"",,Stem borer damage
+sb_dam_rat,"",,Stem borer damage
+borer_dam_rat,"",,Stem borer damage rating
+borer1,"",,Stem borer damage 1
+borer2,"",,Stem borer damage 2
+borer3,"",,Stem borer damage 3
+borer4,"",,Stem borer damage 4
+stemtunnel,"",,Stem tunneling by stem borers
+sbdamrat,"",,Stem borer damage rating
+cob_dam_co,"",,Cob damage
+cob_dam_rt,"",,Cob damage rating
+curv,"",,Curvularia leaf spot severity
+dead_heart,"",,Death of young plants
+diplodia,"",,Stenocarpella ear rot severity
+dm,"",,Maize dwarf mosaic virus incidence
+dy_poll,"",,Numbers of Days to pollination
+e_asp,"",,Ear Aspect
+e_harv,"",,Ear Harvest
+e_rot,"",,Ear Rot
+ear_dam_co,"",,Ear Damage
+ear_dam_rat,"",,Ear Damage rating
+eldana,"",,Eldana saccharina
+gls,"",,Gray leaf spot severity
+gr_maize,"",,Glyphosate Resistant Maize
+gtext,"",,Grain texture
+helm,"",,Maydis leaf blight severity
+hm,"",,Hm
+husk,"",,Ear husk cover
+insect,"",,Insect
+inst,"",,Trial Instance
+leaf_feed,"",,Leaf feed
+moist,"",,Grain moisture
+mussidia,"",,Mussidia nigrivenella - ear borer
+polshed,"",,Pollen shedding
+rl,"",,Root lodging
+rl_rat,"",,Root lodging rating
+rlper,"",,Root lodging in percent
+rust,"",,Rust diseases
+sl,"",,Stalk lodging
+sl_rat,"",,Stalk lodging rating
+slper,"",,Stalk lodging in percent
+stalk_rot,"",,Stalk rot
+str_co1,"",,The number of emerged Striga plants per plot at 8 weeks after planting
+str_co2,"",,The number of emerged Striga plants per plot at 10 weeks after planting
+str_co3,"",,The number of emerged Striga plants per plot at 3 weeks after planting
+str_rat1,"",,"Striga damage symptom rating scored on a scale of 1-5 or 1-9, where 1=no Striga damage symptom and 5 or 9=severe Striga damage symptom at 8 weeks after planting"
+str_rat2,"",,"Striga damage symptom rating scored on a scale of 1-5 or 1-9, where 1=no Striga damage symptom and 5 or 9=severe Striga damage symptom at 10 weeks after planting"
+streak,"",,Streak virus
+easpin,"",,Ear Aspect - Infested
+eharvin,"",,Ear Harvest - Infested
+ehtin,"",,Ear Height - Infested
+fwtin,"",,Field weight - Infested
+fwtun,"",,Field weight - Non-infested
+huskin,"",,Husk Cover - Infested
+leaffeed,"",,Leaf feed
+lfeed2,"",,Leaf feed
+paspin,"",,Plant Aspect - Infested
+pharvin,"",,Plant Harvest - Infested
+rlin,"",,Root lodging - Infested
+slin,"",,Stalk lodging - Infested
+dyskin,"",,Number of Days to silk - Infested
+eardamin,"",,Ear Damage - Infested
+erotin,"",,Ear Rot - Infested
+moistin,"",,Grain moisture - Infested
