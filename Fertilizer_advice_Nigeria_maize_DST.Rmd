@@ -29,8 +29,17 @@ Below we explain how we go about meeting this challenge, and explain each step o
 ```{r setup, warning=FALSE, message=FALSE, fig.align="center", tidy=TRUE }
 
 ############################################# 
-# MAIN SCRIPT TO DESIGN ANALYTICAL WORKLOW
+# MAIN SCRIPT TO DESIGN ANALYTICAL WORKLOW (Descriptive, diagnostic, predictiv and prescriptiv analysis)
 # Ivana Aleksovska
+
+#The four most fundamental types of data analytics include:
+#	- Descriptive Analytics: describes events or trends over time, such as determining whether the heatwave days have increased or decreased during the past 30 years.
+#	- Diagnostic Analytics: unravel the causes behind specific events, such as investigating the factors leading to heavy rainfall in Auckland, New Zealand, in January 2023. This process requires formulating hypotheses and working with a diverse dataset to gain insights into the root causes.
+#	- Predictive Analytics: aim at anticipating events that are likely to occur in the future. For example, people are keen to know how heatwave days will change in 2050 under climate change. In predictive analysis, data analysts leverage insights from previous data. Machine learning, deep learning, and other AI technologies have been extensively applied to predictive analysis. Some may heavily depend on numerical models such as climate change projections.
+#	- Prescriptive Analytics: involve identifying the most effective strategy for implementing a decision that has been reached. Prescriptive Analytics entails proposing a course of action. For instance, if the probability of rising sea levels is projected to increase to very high levels in a coastal area by global climate models, an adaptation strategy could involve designing a seawall.
+
+# Other analytics types may include quantitative and qualitative analysis, exploratory analysis (mentioned in data preparation), statistical analysis, etc. It is worth noting that the selection of data analysis methods is primarily determined by the questions that need addressing.
+
 #############################################
 
 # This part contains the packages and the libraries that will be used in the following
@@ -88,6 +97,7 @@ carob_fertilizer<- carob_fertilizer[ which(carob_fertilizer$country=="Nigeria" &
 
 # ---------------------------------------------------------------------------------------
 # 3. DATA ANALYSIS (descriptive statistic and visualisation)
+# Descriptive analysis describes events or trends over time.
 # a) Perform a comprehensive exploratory data analysis to summarize the main characteristics of the data)
 # b) Use appropriate visualizations to illustrate your findings. 
 
@@ -181,6 +191,7 @@ grid.arrange(a,b, ncol=2, top='Contribution of the variables to the first two PC
 # Based on the pca analysis, we can reduce the dimension and build predictive statistics using machine learning models on the pca components (keeping the first most important ones). However, in this case, we've only taken 3 predictors, so we'll keep them for this exercise. In any case, I'm happy to do more advanced machine learning models, using the full list of predictors given in the data. In this case, PCA will be explored even further.
 # ---------------------------------------------------------------------------------------
 # 4. MACHINE LEARNING (predictive statistics)
+# In predictive analysis, data analysts leverage insights from previous data. Aim at anticipating events that are likely to occur in the future. 
 
 # I) Partition data into training and test sets (usually also validation set, but here for simplicity only 2). We use 70% of the data for training, and 30% for testing.
 
@@ -274,7 +285,8 @@ mod_lm <- train(yield~N_fertilizer+P_fertilizer+K_fertilizer,
 
 # ---------------------------------------------------------------------------------------
 # IV) Compare the performance of the three algorithms:
-  
+# Prescriptive Analytics: involve identifying the most effective strategy for implementing a decision that has been reached.
+
 #Root Mean Square Error (RMSE) is the standard deviation of the residuals (prediction errors). Residuals are a measure of how far from the regression line data points are; RMSE is a measure of how to spread out these residuals are. In other words, it tells you how concentrated the data is around the line of best fit. RMSE value with zero indicates that the model has a perfect fit. The lower the RMSE, the better the model and its predictions. A higher RMSE indicates that there is a large deviation from the residual to the ground truth. From the histogram we can see that the RF outperform NN and LM.
 
 results <- data.frame(Model = c(mod_rf$method,mod_nn$method, mod_lm$method),
